@@ -17,19 +17,19 @@ class MyApp(QWidget):
     def init_ui(self):
         main_layout = QVBoxLayout(self)
 
-        # Top layout
+       
         top_layout = QHBoxLayout()
 
-        # --- Smaller left panel (Files button + list)
+     
         left_panel = QVBoxLayout()
         self.files_button = QPushButton("Files")
         left_panel.addWidget(self.files_button)
 
         self.file_list = QListWidget()
-        self.file_list.setFixedWidth(150)  # Make file list narrower
+        self.file_list.setFixedWidth(150) 
         left_panel.addWidget(self.file_list)
 
-        # Combine with "Image" label
+      
         left_side = QHBoxLayout()
         left_side.addLayout(left_panel)
 
@@ -40,14 +40,14 @@ class MyApp(QWidget):
 
         top_layout.addLayout(left_side)
 
-        # --- Image display area
+      
         self.image_display = QLabel()
         self.image_display.setAlignment(Qt.AlignCenter)
         self.image_display.setStyleSheet("border: 1px solid black;")
         self.image_display.setFixedSize(500, 400)
         top_layout.addWidget(self.image_display)
 
-        # --- Bottom layout with buttons
+     
         bottom_layout = QHBoxLayout()
         bottom_layout.addWidget(QPushButton("Left"))
         bottom_layout.addWidget(QPushButton("Right"))
@@ -55,7 +55,7 @@ class MyApp(QWidget):
         bottom_layout.addWidget(QPushButton("Button 4"))
         bottom_layout.addWidget(QPushButton("Button 5"))
 
-        # Add layouts to main layout
+       
         main_layout.addLayout(top_layout)
         main_layout.addLayout(bottom_layout)
 
